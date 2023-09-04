@@ -34,3 +34,4 @@ pipenv = "*"
 django-import-export = "*"
 drf-spectacular = "~=0.26.4"
 cb-django-drive = {editable = true, path = "./modules/django_drive"}
+cb-django-slack = {editable = true, path = "./modules/django_slack"}
