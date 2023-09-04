@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "27c09e5cfca9ea4d9193720b66a5b7258e8964eec360e23104c996512d2ef100"
+            "sha256": "04e454cff1c300f2ce74d211fb43f6628a689832cb18e94f97c34a69fa9ce9aa"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -67,6 +67,10 @@
         "cb-django-drive": {
             "editable": true,
             "path": "./modules/django_drive"
+        },
+        "cb-django-push-notifications": {
+            "editable": true,
+            "path": "./modules/django_push_notifications"
         },
         "cb-django-slack": {
             "editable": true,
