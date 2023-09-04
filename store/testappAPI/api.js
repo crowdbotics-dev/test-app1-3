@@ -63,6 +63,38 @@ function modules_drive_service_upload_file_create(payload) {
   return testappAPI.post(`/modules/drive/service/upload/file/`, payload);
 }
 
+function modules_slack_service_archive_channel_create(payload) {
+  return testappAPI.post(`/modules/slack/service/${payload.id}/archive_channel/`, payload);
+}
+
+function modules_slack_service_channel_history_retrieve(payload) {
+  return testappAPI.get(`/modules/slack/service/${payload.id}/channel_history/`);
+}
+
+function modules_slack_service_get_channel_id_retrieve(payload) {
+  return testappAPI.get(`/modules/slack/service/${payload.id}/get-channel-id/`);
+}
+
+function modules_slack_service_create_channel_create(payload) {
+  return testappAPI.post(`/modules/slack/service/create-channel/`, payload);
+}
+
+function modules_slack_service_get_users_retrieve(payload) {
+  return testappAPI.get(`/modules/slack/service/get_users/`);
+}
+
+function modules_slack_service_invite_user_to_channel_create(payload) {
+  return testappAPI.post(`/modules/slack/service/invite-user-to-channel/`, payload);
+}
+
+function modules_slack_service_send_message_create(payload) {
+  return testappAPI.post(`/modules/slack/service/send-message/`, payload);
+}
+
+function modules_slack_service_upload_file_create(payload) {
+  return testappAPI.post(`/modules/slack/service/upload-file/`, payload);
+}
+
 function rest_auth_login_create(payload) {
   return testappAPI.post(`/rest-auth/login/`, payload);
 }
@@ -121,6 +153,14 @@ export const apiService = {
   modules_drive_service_file_list_retrieve,
   modules_drive_service_share_file_create,
   modules_drive_service_upload_file_create,
+  modules_slack_service_archive_channel_create,
+  modules_slack_service_channel_history_retrieve,
+  modules_slack_service_get_channel_id_retrieve,
+  modules_slack_service_create_channel_create,
+  modules_slack_service_get_users_retrieve,
+  modules_slack_service_invite_user_to_channel_create,
+  modules_slack_service_send_message_create,
+  modules_slack_service_upload_file_create,
   rest_auth_login_create,
   rest_auth_logout_retrieve,
   rest_auth_logout_create,
