@@ -1,68 +1,96 @@
-import axios from "axios"
+import axios from "axios";
 const testappAPI = axios.create({
   baseURL: "https://test-app1-3.botics.co",
-  headers: { Accept: "application/json", "Content-Type": "application/json" }
-})
+  headers: {
+    Accept: "application/json",
+    "Content-Type": "application/json"
+  }
+});
+
 function api_docs_schema_retrieve(payload) {
-  return testappAPI.get(`/api-docs/schema/`, { params: { lang: payload.lang } })
+  return testappAPI.get(`/api-docs/schema/`, {
+    params: {
+      lang: payload.lang
+    }
+  });
 }
+
 function api_v1_login_create(payload) {
-  return testappAPI.post(`/api/v1/login/`, payload)
+  return testappAPI.post(`/api/v1/login/`, payload);
 }
+
 function api_v1_signup_create(payload) {
-  return testappAPI.post(`/api/v1/signup/`, payload)
+  return testappAPI.post(`/api/v1/signup/`, payload);
 }
+
 function modules_articles_article_list(payload) {
-  return testappAPI.get(`/modules/articles/article/`)
+  return testappAPI.get(`/modules/articles/article/`);
 }
+
 function modules_articles_article_create(payload) {
-  return testappAPI.post(`/modules/articles/article/`, payload)
+  return testappAPI.post(`/modules/articles/article/`, payload);
 }
+
 function modules_articles_article_retrieve(payload) {
-  return testappAPI.get(`/modules/articles/article/${payload.id}/`)
+  return testappAPI.get(`/modules/articles/article/${payload.id}/`);
 }
+
 function modules_articles_article_update(payload) {
-  return testappAPI.put(`/modules/articles/article/${payload.id}/`, payload)
+  return testappAPI.put(`/modules/articles/article/${payload.id}/`, payload);
 }
+
 function modules_articles_article_partial_update(payload) {
-  return testappAPI.patch(`/modules/articles/article/${payload.id}/`, payload)
+  return testappAPI.patch(`/modules/articles/article/${payload.id}/`, payload);
 }
+
 function modules_articles_article_destroy(payload) {
-  return testappAPI.delete(`/modules/articles/article/${payload.id}/`)
+  return testappAPI.delete(`/modules/articles/article/${payload.id}/`);
 }
+
 function rest_auth_login_create(payload) {
-  return testappAPI.post(`/rest-auth/login/`, payload)
+  return testappAPI.post(`/rest-auth/login/`, payload);
 }
+
 function rest_auth_logout_retrieve(payload) {
-  return testappAPI.get(`/rest-auth/logout/`)
+  return testappAPI.get(`/rest-auth/logout/`);
 }
+
 function rest_auth_logout_create(payload) {
-  return testappAPI.post(`/rest-auth/logout/`)
+  return testappAPI.post(`/rest-auth/logout/`);
 }
+
 function rest_auth_password_change_create(payload) {
-  return testappAPI.post(`/rest-auth/password/change/`, payload)
+  return testappAPI.post(`/rest-auth/password/change/`, payload);
 }
+
 function rest_auth_password_reset_create(payload) {
-  return testappAPI.post(`/rest-auth/password/reset/`, payload)
+  return testappAPI.post(`/rest-auth/password/reset/`, payload);
 }
+
 function rest_auth_password_reset_confirm_create(payload) {
-  return testappAPI.post(`/rest-auth/password/reset/confirm/`, payload)
+  return testappAPI.post(`/rest-auth/password/reset/confirm/`, payload);
 }
+
 function rest_auth_registration_create(payload) {
-  return testappAPI.post(`/rest-auth/registration/`, payload)
+  return testappAPI.post(`/rest-auth/registration/`, payload);
 }
+
 function rest_auth_registration_verify_email_create(payload) {
-  return testappAPI.post(`/rest-auth/registration/verify-email/`, payload)
+  return testappAPI.post(`/rest-auth/registration/verify-email/`, payload);
 }
+
 function rest_auth_user_retrieve(payload) {
-  return testappAPI.get(`/rest-auth/user/`)
+  return testappAPI.get(`/rest-auth/user/`);
 }
+
 function rest_auth_user_update(payload) {
-  return testappAPI.put(`/rest-auth/user/`, payload)
+  return testappAPI.put(`/rest-auth/user/`, payload);
 }
+
 function rest_auth_user_partial_update(payload) {
-  return testappAPI.patch(`/rest-auth/user/`, payload)
+  return testappAPI.patch(`/rest-auth/user/`, payload);
 }
+
 export const apiService = {
   api_docs_schema_retrieve,
   api_v1_login_create,
@@ -84,4 +112,4 @@ export const apiService = {
   rest_auth_user_retrieve,
   rest_auth_user_update,
   rest_auth_user_partial_update
-}
+};
