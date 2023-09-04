@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "04e454cff1c300f2ce74d211fb43f6628a689832cb18e94f97c34a69fa9ce9aa"
+            "sha256": "13823f4050c5b7eecb33162d6433d684622ebf70522b0e785d470cbe97d0b29a"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -75,6 +75,10 @@
         "cb-django-slack": {
             "editable": true,
             "path": "./modules/django_slack"
+        },
+        "cb-zoom-info": {
+            "editable": true,
+            "path": "./modules/django_zoom_info"
         },
         "certifi": {
             "hashes": [

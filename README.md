@@ -62,6 +62,7 @@ This section will show any installed modules you add from the Storyboard Modules
 - [django-drive](backend/modules)
 - [django-slack](backend/modules)
 - [django-push-notifications](backend/modules)
+- [django-zoom-info](backend/modules)
 
 # Getting started: Frontend
 
