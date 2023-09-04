@@ -12,6 +12,36 @@ function api_v1_login_create(payload) {
 function api_v1_signup_create(payload) {
   return testappAPI.post(`/api/v1/signup/`, payload)
 }
+function modules_articles_article_list(payload) {
+  return testappAPI.get(`/modules/articles/article/`)
+}
+function modules_articles_article_create(payload) {
+  return testappAPI.post(`/modules/articles/article/`, payload)
+}
+function modules_articles_article_retrieve(payload) {
+  return testappAPI.get(`/modules/articles/article/${payload.id}/`)
+}
+function modules_articles_article_update(payload) {
+  return testappAPI.put(`/modules/articles/article/${payload.id}/`, payload)
+}
+function modules_articles_article_partial_update(payload) {
+  return testappAPI.patch(`/modules/articles/article/${payload.id}/`, payload)
+}
+function modules_articles_article_destroy(payload) {
+  return testappAPI.delete(`/modules/articles/article/${payload.id}/`)
+}
+function modules_drive_service_create_folder_create(payload) {
+  return testappAPI.post(`/modules/drive/service/create/folder/`, payload)
+}
+function modules_drive_service_file_list_retrieve(payload) {
+  return testappAPI.get(`/modules/drive/service/file/list/`)
+}
+function modules_drive_service_share_file_create(payload) {
+  return testappAPI.post(`/modules/drive/service/share/file/`, payload)
+}
+function modules_drive_service_upload_file_create(payload) {
+  return testappAPI.post(`/modules/drive/service/upload/file/`, payload)
+}
 function rest_auth_login_create(payload) {
   return testappAPI.post(`/rest-auth/login/`, payload)
 }
@@ -49,6 +79,16 @@ export const apiService = {
   api_docs_schema_retrieve,
   api_v1_login_create,
   api_v1_signup_create,
+  modules_articles_article_list,
+  modules_articles_article_create,
+  modules_articles_article_retrieve,
+  modules_articles_article_update,
+  modules_articles_article_partial_update,
+  modules_articles_article_destroy,
+  modules_drive_service_create_folder_create,
+  modules_drive_service_file_list_retrieve,
+  modules_drive_service_share_file_create,
+  modules_drive_service_upload_file_create,
   rest_auth_login_create,
   rest_auth_logout_retrieve,
   rest_auth_logout_create,
